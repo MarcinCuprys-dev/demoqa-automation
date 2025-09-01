@@ -1,0 +1,23 @@
+{
+  "name": "demoqa-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcinCuprys-dev/demoqa-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MarcinCuprys-dev/demoqa-automation/issues"
+  },
+  "homepage": "https://github.com/MarcinCuprys-dev/demoqa-automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0"
+  }
+}
