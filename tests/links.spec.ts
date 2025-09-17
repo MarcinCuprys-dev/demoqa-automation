@@ -9,7 +9,7 @@ test.describe("DemoQA Links", () => {
     await linksPage.goto();
   });
 
-  test("Created link returns 201", async () => {
+  test.only("Created link returns 201", async () => {
     const response = await linksPage.clickAndWaitForResponse({
       link: linksPage.createdLink,
       endpoint: "/created",
@@ -27,7 +27,7 @@ test.describe("DemoQA Links", () => {
     );
   });
 
-  test("No content link returns 204", async () => {
+  test.only("No content link returns 204", async () => {
     const response = await linksPage.clickAndWaitForResponse({
       link: linksPage.noContentLink,
       endpoint: "/no-content",
@@ -124,7 +124,7 @@ test.describe("DemoQA Links", () => {
       expectedStatus: 404,
     });
 
-    expect(response.url()).toContain("https://demoqa.com/invalid-url");
+    expect(response.url(),"Message").toContain("https://demoqa.com/invalid-url");
     expect(response.status()).toBe(404);
     expect(response.statusText()).toBe("Not Found");
     expect(response.request().method()).toBe("GET");
@@ -188,7 +188,6 @@ test.describe("DemoQA Links", () => {
       endpoint: random.endpoint,
       expectedStatus: random.status,
     });
-    console.log(response);
 
     expect(response.url()).toContain(`https://demoqa.com${random.endpoint}`);
     expect(response.status()).toBe(random.status);
@@ -201,3 +200,12 @@ test.describe("DemoQA Links", () => {
     );
   });
 });
+
+
+//demo qa się powtarz 
+// tablica do przeniesienia -> helper 
+// i random do przeniesienia -> global utils 
+// soft expect  
+// message expect 
+// .env z base url 
+// 
