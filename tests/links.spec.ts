@@ -9,7 +9,7 @@ test.describe("DemoQA Links", () => {
     await linksPage.goto();
   });
 
-  test.only("Created link returns 201", async () => {
+  test("Created link returns 201", async () => {
     const response = await linksPage.clickAndWaitForResponse({
       link: linksPage.createdLink,
       endpoint: "/created",
@@ -27,7 +27,7 @@ test.describe("DemoQA Links", () => {
     );
   });
 
-  test.only("No content link returns 204", async () => {
+  test("No content link returns 204", async () => {
     const response = await linksPage.clickAndWaitForResponse({
       link: linksPage.noContentLink,
       endpoint: "/no-content",
@@ -200,12 +200,3 @@ test.describe("DemoQA Links", () => {
     );
   });
 });
-
-
-//demo qa się powtarz 
-// tablica do przeniesienia -> helper 
-// i random do przeniesienia -> global utils 
-// soft expect  
-// message expect 
-// .env z base url 
-// 
